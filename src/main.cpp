@@ -20,11 +20,12 @@ std::string  w1 = "";
 int price = 0;
 char ch;
 while (fin.get(ch)) {
-if (ch != '\n'){
+if (ch != '\n') {
 if (ch != ' ') {
-if (ch>='А'&&ch<='я') {
-w1 += ch;
-} if (ch >= '0'&& ch <='9') {
+if (ch >= 'А' && ch <= 'я') {
+w1 += ch; 
+} 
+if (ch >= '0' && ch <='9') {
 if (price == 0) {
 price += static_cast<int>(ch)-48;
 } else {
