@@ -1,3 +1,4 @@
+// Copyright 2024 Yuri Shalnov
 #include "Product.h"
 #include <iostream>
 
@@ -9,7 +10,8 @@ Product::~Product() {
 }
 
 void Product::print() {
-std::cout << "|  " << product << "  | "; std::cout << Price << "  |" << std::endl;
+std::cout << "|  " << product << "  | ";
+std::cout << Price << "  |" << std::endl;
 }
 
 int Product::get_price() {
