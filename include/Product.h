@@ -4,10 +4,10 @@
 using namespace std;
 
 class Product {
-private :
+private:
 std::string product;
 int Price;
-public :
+public:
 Product(std::string pr, int price);
 ~Product();
 void print();
