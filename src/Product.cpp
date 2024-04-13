@@ -9,7 +9,7 @@ Product::~Product() {
 }
 
 void Product::print() {
-cout << "|  " << product << "  | "; cout << Price << "  |" << endl;
+std::cout << "|  " << product << "  | "; std::cout << Price << "  |" << std::endl;
 }
 
 int Product::get_price() {
