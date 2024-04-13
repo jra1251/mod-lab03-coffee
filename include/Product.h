@@ -2,11 +2,11 @@
 #pragma once
 #include <string>
 #include <string>
-using namespace std;
+
 
 class Product {
  private:
-    string product;
+    std::string product;
     int Price;
  public:
     Product(std::string pr, int price);
