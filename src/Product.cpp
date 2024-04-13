@@ -1,32 +1,20 @@
 #include "Product.h"
-#include <string>
 #include <iostream>
 
-
-class Product
+Product::Product(std::string pr, int price)
 {
-public:
-	Product::Product(char name [5], int price)
-{
+	product = pr;
 	Price = price;
-	Name = name;
 }
-void Product::Print()
+Product::~Product(){}
+
+void Product::print()
 {
-	std::cout << "|%10c|%5d" << Name, Price <<;
+	cout << "|  " << product << "  | "; cout << Price << "  |" << endl;
 }
-	~Product();
-	Product::~Product()
+
+int Product::get_price()
 {
+	return Price;
 }
-
-private:
-	int Price;
-	char Name[5];
-
-};
-
-
-
-
 
