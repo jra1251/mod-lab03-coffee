@@ -1,3 +1,4 @@
+// Copyright 2024 Yuri Shalnov
 #include "Automata.h"
 bool Automata::Check(int selection) {
 int count = 0;
@@ -46,14 +47,12 @@ Automata::~Automata() {
 }
 
 void Automata::ON() {
-if (state == off)
-{
+if (state == off) {
 state = wait;
 std::cout << "Êîôåìàøèíà âêëþ÷åíà" << std::endl;
-}
-else {
+} else {
 std::cout << "Êîôåìàøèíà óæå âêëþ÷åíà" << std::endl;
-}	
+}
 }
 
 void Automata::GetMenu() {
