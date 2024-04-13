@@ -3,7 +3,7 @@
 #include "Product.h"
 #include <list>
 #include <iostream>
-using namespace std;
+
 
 enum States {
 on, off, coin, choise, check, cancel, cook, finish, wait, accept
@@ -11,7 +11,7 @@ on, off, coin, choise, check, cancel, cook, finish, wait, accept
 
 class Automata {
  private:
-    list<Product>Menu;
+    std::list<Product>Menu;
     States state;
     int cash;
     bool Check(int);
