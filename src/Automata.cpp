@@ -1,6 +1,5 @@
 #include "Automata.h"
-bool Automata::Check(int selection)
-{
+bool Automata::Check(int selection) {
 int count = 0;
 list<Product>::iterator i;
 i = Menu.begin();
@@ -13,8 +12,7 @@ state = accept;
 return false;
 }
 }
-void Automata::Cook(int selection)
-{
+void Automata::Cook(int selection) {
 if (state == check) {
 state = cook;
 list<Product>::iterator i;
@@ -24,36 +22,30 @@ cash -= (*i).get_price();
 std::cout << "Âàø íàïèòîê ãîòîâèòñÿ"
 << std::endl;
 Finish(selection);
-}
-else {
+} else {
 std::cout << "Îïåðàöèÿ íåâîçìîæíà" << std::endl;
 }
 }
 
-void Automata::Finish(int selection)
-{
+void Automata::Finish(int selection) {
 if (state == cook) {
 std::cout << "Ñäà÷à: " << cash << std::endl;
 std::cout << "Âîò âàø íàïèòîê" << std::endl;
 cash = 0;
 state = wait;
-}
-else {
+} else {
 std::cout << "Îïåðàöèÿ íåâîçìîæíà" << std::endl;
 }
 }
-Automata::Automata(list<Product>menu)
-{
+Automata::Automata(list<Product>menu) {
 Menu = menu;
 state = off;
 }
 
-Automata::~Automata()
-{
+Automata::~Automata() {
 }
 
-void Automata::ON()
-{
+void Automata::ON() {
 if (state == off)
 {
 state = wait;
@@ -64,8 +56,7 @@ cout << "Êîôåìàøèíà óæå âêëþ÷åíà" << endl;
 }	
 }
 
-void Automata::GetMenu()
-{
+void Automata::GetMenu() {
 if (state == wait) {
 cout << " |   Íàçâàíèå  | öåíà |" << endl;
 list<Product>::iterator i;
@@ -78,8 +69,7 @@ count++;
 }
 }
 
-void Automata::OFF()
-{
+void Automata::OFF() {
 if (state == wait) {
 state = off;
 cout << "Êîôåìàøèíà îòêëþ÷åíà" << endl;
@@ -88,13 +78,11 @@ cout << "Îïåðàöèÿ íå âîçìîæíà" << endl;
 }
 }
 
-States Automata::get_State()
-{
+States Automata::get_State() {
 return state;
 }
 
-void Automata::coin(int money)
-{
+void Automata::coin(int money) {
 if (state == wait || state == accept) {
 state = accept;
 cash += money;
@@ -104,8 +92,7 @@ std::cout << "Îïåðàöèÿ íåâîçìîæíà" << std::endl;
 }
 }
 
-void Automata::choice(int vibor)
-{
+void Automata::choice(int vibor) {
 if (state == accept) {
 if (vibor<1 || vibor>Menu.size()) {
 cout << "Âûáîð íåêîððåêòåí" << endl;
@@ -120,14 +107,12 @@ cout << "Îïåðàöèÿ íå âîçìîæíà" << endl;
 }
 }
 
-void Automata::cancel()
-{
+void Automata::cancel() {
 if (state == accept || state == check) {
 state = wait;
 cash = 0;
 std::cout << "Îìåíà " << std::endl;
-}
-else {
+} else {
 std::cout << "Wrong transition!" << std::endl;
 }
 }
