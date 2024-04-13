@@ -8,13 +8,11 @@ Price = price;
 Product::~Product() {
 }
 
-void Product::print()
-{
+void Product::print() {
 cout << "|  " << product << "  | "; cout << Price << "  |" << endl;
 }
 
-int Product::get_price()
-{
+int Product::get_price() {
 return Price;
 }
 
