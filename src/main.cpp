@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include<fstream>
+#include<string>
 #include<locale>
 #include "Product.h"
 #include <list>
