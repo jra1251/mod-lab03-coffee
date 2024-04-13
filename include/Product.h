@@ -3,8 +3,7 @@
 #include <string>
 using namespace std;
 
-class Product
-{
+class Product {
 private:
 std::string product;
 int Price;
