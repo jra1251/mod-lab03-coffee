@@ -9,8 +9,7 @@ enum States {
 on, off, coin, choise, check, cancel, cook, finish, wait, accept
 };
 
-class Automata
-{
+class Automata {
 private  :
 list<Product>Menu;
 States state;
