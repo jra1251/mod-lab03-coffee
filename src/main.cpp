@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include<fstream>
-#include<locale.h>
+#include<locale>
 #include "Product.h"
 #include <list>
 #include "Automata.h"
