@@ -1,3 +1,4 @@
+//Copyrihgt 2024 Shalnov Yuri
 #pragma once
 #include "Product.h"
 #include <list>
