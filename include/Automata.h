@@ -10,7 +10,7 @@ on, off, coin, choise, check, cancel, cook, finish, wait, accept
 };
 
 class Automata {
-private :
+private:
 list<Product>Menu;
 States state;
 int cash;
@@ -18,7 +18,7 @@ bool Check(int);
 void Cook(int);
 void Finish(int);
 
-public :
+public:
 Automata(list<Product>); 
 ~Automata();
 void ON();
