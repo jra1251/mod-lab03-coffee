@@ -11,7 +11,7 @@
 
 int main() {
 setlocale(LC_ALL, "ru");
-stdstring path = "List_Product.txt";
+std::string path = "List_Product.txt";
 std::ifstream fin;
 fin.open(path);
 std::list<Product> Menu;
@@ -23,7 +23,7 @@ char ch;
 while (fin.get(ch)) {
 if (ch != '\n') {
 if (ch != ' ') {
-if ('А' <= ch <= 'я') {
+if (ch>= 'А' &&ch<='я') {
 w1 += ch;
 }
 if (ch >= '0' && ch <='9') {
