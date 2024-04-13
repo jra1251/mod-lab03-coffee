@@ -8,18 +8,18 @@
 #include "Product.h"
 #include <list>
 #include "Automata.h"
-using namespace std;
+
 
 int main()
 {
 setlocale(LC_ALL,"ru");
-string path = "List_Product.txt";
-ifstream fin;
+stdstring path = "List_Product.txt";
+std::ifstream fin;
 fin.open(path);
-list<Product> Menu;
+std::list<Product> Menu;
 if (fin.is_open()) {
 std::cout << "Чтение из файла..." << std::endl;
-string  w1="";
+std::string  w1="";
 int price = 0;
 char ch;
 while (fin.get(ch)) {
@@ -42,7 +42,7 @@ price = 0;
 w1 = "";
 }
 }
-cout << "меню установлено" << endl;
+std::cout << "меню установлено" << std::endl;
 }
 else 
 {
@@ -52,15 +52,15 @@ Automata Coffe(Menu);
 Coffe.ON();
 Coffe.GetMenu();
 int vibor,coin;
-cin >> coin;
+std::cin >> coin;
 Coffe.coin(coin);
-cin >> vibor;
+std::cin >> vibor;
 Coffe.choice(vibor);
 Coffe.coin(1);
 Coffe.choice(2);
 Coffe.coin(149);
 Coffe.choice(2);
-cout << Coffe.get_State() << endl;
+std::cout << Coffe.get_State() << std::endl;
 fin.close();
 }
 
