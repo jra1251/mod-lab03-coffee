@@ -3,6 +3,7 @@
 #include "Product.h"
 #include <list>
 #include <iostream>
+#include<string>
 
 
 enum States {
