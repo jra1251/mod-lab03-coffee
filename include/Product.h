@@ -6,7 +6,7 @@ using namespace std;
 
 class Product {
  private:
-    std::string product;
+    string product;
     int Price;
  public:
     Product(std::string pr, int price);
