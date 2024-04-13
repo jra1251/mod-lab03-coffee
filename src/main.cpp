@@ -54,17 +54,14 @@ Coffe.GetMenu();
 int vibor,coin;
 cin >> coin;
 Coffe.coin(coin);
-	
-	cin >> vibor;
-	Coffe.choice(vibor);
-
-	Coffe.coin(1);
-	Coffe.choice(2);
-	Coffe.coin(149);
-	Coffe.choice(2);
-	cout << Coffe.get_State() << endl;
-
-	fin.close();
+cin >> vibor;
+Coffe.choice(vibor);
+Coffe.coin(1);
+Coffe.choice(2);
+Coffe.coin(149);
+Coffe.choice(2);
+cout << Coffe.get_State() << endl;
+fin.close();
 }
 
 
