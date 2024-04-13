@@ -1,4 +1,4 @@
-//Copyrihgt 2024 Shalnov Yuri
+// Copyright 2024 Yuri Shalnov
 #pragma once
 #include "Product.h"
 #include <list>
@@ -10,23 +10,23 @@ on, off, coin, choise, check, cancel, cook, finish, wait, accept
 };
 
 class Automata {
-private:
-list<Product>Menu;
-States state;
-int cash;
-bool Check(int);
-void Cook(int);
-void Finish(int);
+ private:
+    list<Product>Menu;
+    States state;
+    int cash;
+    bool Check(int);
+    void Cook(int);
+    void Finish(int);
 
-public:
-Automata(list<Product>); 
-~Automata();
-void ON();
-void GetMenu();
-void OFF();
-States get_State();
-void coin(int);
-void choice(int);
-void cancel();
+ public:
+    Automata(list<Product>); 
+    ~Automata();
+    void ON();
+    void GetMenu();
+    void OFF();
+    States get_State();
+    void coin(int);
+    void choice(int);
+    void cancel();
 };
 
