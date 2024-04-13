@@ -106,29 +106,29 @@ std::cout << "Îïåðàöèÿ íåâîçìîæíà" << std::endl;
 
 void Automata::choice(int vibor)
 {
-	if (state == accept) {
-		if (vibor<1 || vibor>Menu.size()) {
-			cout << "Âûáîð íåêîððåêòåí" << endl;
-		} else {
-			state = check;
-			if (Check(vibor)) {
-				Cook(vibor);
-			}
-		}
-	}else {
-		cout << "Îïåðàöèÿ íå âîçìîæíà" << endl;
-	}
+if (state == accept) {
+if (vibor<1 || vibor>Menu.size()) {
+cout << "Âûáîð íåêîððåêòåí" << endl;
+} else {
+state = check;
+if (Check(vibor)) {
+Cook(vibor);
+}
+}
+} else {
+cout << "Îïåðàöèÿ íå âîçìîæíà" << endl;
+}
 }
 
 void Automata::cancel()
 {
-	if (state == accept || state == check) {
-		state = wait;
-		cash = 0;
-		std::cout << "Îìåíà " << std::endl;
-	}
-	else {
-		std::cout << "Wrong transition!" << std::endl;
-	}
+if (state == accept || state == check) {
+state = wait;
+cash = 0;
+std::cout << "Îìåíà " << std::endl;
+}
+else {
+std::cout << "Wrong transition!" << std::endl;
+}
 }
 
