@@ -9,22 +9,22 @@
 
 
 int main() {
-setlocale(LC_ALL,"ru");
+setlocale(LC_ALL, "ru");
 stdstring path = "List_Product.txt";
 std::ifstream fin;
 fin.open(path);
 std::list<Product> Menu;
 if (fin.is_open()) {
 std::cout << "Чтение из файла..." << std::endl;
-std::string  w1 = "";
+std::string  w1;
 int price = 0;
 char ch;
 while (fin.get(ch)) {
 if (ch != '\n') {
 if (ch != ' ') {
 if ('А' <= ch <= 'я') {
-w1 += ch; 
-} 
+w1 += ch;
+}
 if (ch >= '0' && ch <='9') {
 if (price == 0) {
 price += static_cast<int>(ch)-48;
