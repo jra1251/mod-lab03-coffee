@@ -1,7 +1,7 @@
 // Copyright 2024 Yuri Shalnov
 #pragma once
 #include <string>
-#include <string>
+
 
 
 class Product {
@@ -12,6 +12,6 @@ class Product {
     Product(std::string pr, int price);
     ~Product();
     void print();
-    int get_price();	
+    int get_price();
 };
 
