@@ -20,7 +20,7 @@ class Automata {
     void Finish(int);
 
  public:
-    Automata(std::list<Product>);
+    explicit Automata(std::list<Product>);
     ~Automata();
     void ON();
     void GetMenu();
