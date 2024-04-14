@@ -38,7 +38,7 @@ state = wait;
 std::cout << "Îïåðàöèÿ íåâîçìîæíà" << std::endl;
 }
 }
-Automata::Automata(std::list<Product>menu) {
+explicit Automata::Automata(std::list<Product>menu) {
 Menu = menu;
 state = off;
 }
