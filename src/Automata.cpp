@@ -43,7 +43,7 @@ Menu = menu;
 state = off;
 }
 
-Automata::~Automata() {
+Automata::Automata() : state(off), cash(0) {
 }
 
 void Automata::ON() {
