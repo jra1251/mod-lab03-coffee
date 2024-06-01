@@ -12,7 +12,7 @@ using std::cout;
 using std::endl;
 
 class Automata {
-public:
+ public:
     Automata();
     enum State {
         OFF,
@@ -32,7 +32,7 @@ public:
     Automata::State getState();
     int getCash();
 
-private:
+ private:
     State state;
     vector<string> menu;
     vector<int> prices;
@@ -41,4 +41,4 @@ private:
     int current_price;
 };
 
-#endif #pragma once
+#endif // INCLUDE_AUTOMATA_H_
