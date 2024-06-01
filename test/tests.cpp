@@ -3,9 +3,9 @@
 #include "Automata.h"
 
 TEST(states, ON) {
-   Automata machine = Automata();
-   machine.on();
-   EXPECT_EQ(Automata::WAIT, machine.getState());
+     Automata machine = Automata();
+     machine.on();
+     EXPECT_EQ(Automata::WAIT, machine.getState());
 }
 
 TEST(states, OFF) {
