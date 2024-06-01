@@ -19,13 +19,11 @@ void Automata::off() {
     if (state == WAIT) {
         state = OFF;
         cout << "Automata is off\n";
-    }
-    else if (state == ACCEPT) {
+    } else if (state == ACCEPT) {
         cancel();
         state = OFF;
         cout << "Automata is off\n";
-    }
-    else {
+    } else {
         cout << "Can't turn off the automata in this state\n";
     }
 }
