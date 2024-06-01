@@ -1,17 +1,45 @@
 // Copyright 2024 Yuri Shalnov
-#pragma once
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
+
+#include <iostream>
 #include <string>
+#include <vector>
 
+using std::vector;
+using std::string;
+using std::cout;
+using std::endl;
 
+class Automata {
+public:
+    Automata();
+    enum State {
+        OFF,
+        WAIT,
+        ACCEPT,
+        CHECK,
+        COOK
+    };
+    void on();
+    void off();
+    void coin(int money);
+    void printMenu();
+    void choice(int item);
+    void cancel();
+    void cook();
+    void finish();
+    Automata::State getState();
+    int getCash();
 
-class Product {
- private:
-    std::string product;
-    int Price;
- public:
-    Product(std::string pr, int price);
-    ~Product();
-    void print();
-    int get_price();
+private:
+    State state;
+    vector<string> menu;
+    vector<int> prices;
+    int cash;
+    int choice_;
+    int current_price;
 };
+
+#endif #pragma once
 
